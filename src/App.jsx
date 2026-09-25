@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import Header from "./Header"
 import Footer from "./Footer";
 import About from "./About";
+import Skills from "./Skills";
 import Edu from "./Education";
+
 
 function App() {
   useEffect(() => {
@@ -14,10 +16,12 @@ function App() {
   return(
     <>
     <Header />
+
     <main>
     <About />
-    <Edu />
+    <Skills />
     </main>
+    
     <Footer />
     </>
   );
