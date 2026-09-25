@@ -46,7 +46,7 @@ main{
 }
 
 .linkedin{
-  font-size: 1.7em;
+  font-size: clamp(18px, 2vw, 25px);
   color: white;
   margin: 6px 0 0 0;
 
@@ -71,7 +71,7 @@ main{
 }
 
 .cv-btn svg{
-  font-size: larger;
+  font-size: clamp(small, 2vw, larger);
 }
 
 .nav-links{
@@ -81,8 +81,7 @@ main{
   gap: 30px;
   background-color: #202020;
   border-radius: 15px;
-  padding: 1% 0 1% 0;
-  
+  padding: 1% 0 1% 0;  
 }
 
 .header ul li a{
@@ -90,10 +89,7 @@ main{
   text-decoration: none;
   padding: 10px;
   border: 1px solid transparent;
-}
-
-.header ul li:active{
-  background-color: gray;
+  transition: 0.1s;
 }
 
 .header ul li a:hover{
@@ -101,6 +97,7 @@ main{
   border: 1px solid gray;
   border-radius: 15px;
   background-color: #0f101c;
+  transition: 0.1s;
 }
 
 /*Card Element Properties*/
@@ -111,7 +108,6 @@ main{
   max-width: 65%; 
   margin: 30px auto 200px auto; 
   font-family: sans-serif;
-  justify-content: center;
   z-index: 0;
   display: flex;
   flex-wrap: wrap;
@@ -189,11 +185,11 @@ main{
 
 .card .card-list li {
   font-family: 'Courier New';
+  font-size: clamp(4px, 2vw, 16px);
   color: white;
   border: 1px solid #A1A1AA;
   border-radius: 10px;
   padding: 10px;
-  display: flex;
   align-items: center;
   gap: 12px; 
   position: relative;
@@ -201,7 +197,7 @@ main{
 }
 
 .card .card-list li:hover{
-  font-size: 17px;
+  font-size: clamp(5px, 3vw, 17px);
   transition: 0.5s;
 }
 
@@ -215,8 +211,6 @@ main{
   font-weight: bold;
   color: aqua;
   margin-left: 15px;
-
-
 }
 
 .card .list-ol li{
@@ -230,4 +224,18 @@ main{
 .card .list-ol li:hover{
   color: white;
   cursor: pointer;
+}
+
+
+@media(max-width: 750px){
+  .firstel{
+    font-size: medium;
+  }
+  .nav-links{
+    gap: 0px;
+    font-size: 2vw;
+  }
+  .header{
+    margin-left: 0px;
+  }
 }
