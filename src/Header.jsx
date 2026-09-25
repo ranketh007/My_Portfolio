@@ -13,7 +13,7 @@ function Header(){
         <header>
             <nav className="header">
                 <h2 className="firstel">Dinitha Ranketh</h2>
-                <ul className={`nav-links ${isOpen ? '!flex absolute top-16 right-0 flex-col w-48 shadow-xl z-50' : 'hidden'} md:flex md:static md:flex-row md:w-auto md:shadow-none`}>
+                <ul className={`nav-links ${isOpen ? '!flex absolute top-16 right-0 flex-col w-48 z-50' : 'hidden'} md:flex md:static md:flex-row md:w-auto`}>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
