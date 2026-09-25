@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /*Placeholder properties*/
 h1, h2, h3{
   color: aqua;
@@ -19,7 +21,7 @@ main{
   align-items: center;
   justify-content: space-between;
   width: min(95%, 1200px);
-  padding: 0 5px 0 5px;
+  padding: 1% 5px 1% 5px;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid gray;
   border-radius: 15px;
@@ -43,10 +45,11 @@ main{
   font-weight: lighter;
   justify-content: flex-start;
   white-space: nowrap;
+  font-size: 1.5em;
 }
 
 .linkedin{
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(19px, 2vw, 28px);
   color: white;
   margin: 6px 0 0 0;
 
@@ -76,12 +79,11 @@ main{
 
 .nav-links{
   list-style-type: none;
-  display: flex;
   flex-wrap: wrap;
   gap: 30px;
   background-color: #202020;
   border-radius: 15px;
-  padding: 1% 0 1% 0;  
+  padding: 0.75% 0 0.75% 0;  
 }
 
 .header ul li a{
@@ -189,10 +191,12 @@ main{
   color: white;
   border: 1px solid #A1A1AA;
   border-radius: 10px;
-  padding: 10px;
+  padding: 1%;
+  margin-top: 5px;
   align-items: center;
   gap: 12px; 
   position: relative;
+  display: flex;
   transition: 0.5s;
 }
 
@@ -202,7 +206,7 @@ main{
 }
 
 .card .card-list li svg{
-  color: aqua  ;
+  color: aqua;
 }
 
 
@@ -231,11 +235,8 @@ main{
   .firstel{
     font-size: medium;
   }
-  .nav-links{
-    gap: 0px;
-    font-size: 2vw;
-  }
   .header{
     margin-left: 0px;
   }
+
 }
