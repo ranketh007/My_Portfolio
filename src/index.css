@@ -238,5 +238,6 @@ main{
   .header{
     margin-left: 0px;
   }
+  .nav-links{display: none;}
 
 }
