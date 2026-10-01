@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 /*Placeholder properties*/
-h1, h2, h3{
+h1, h2{
   color: aqua;
 }
 
-li,p { color: white}
 
 body{
-  background-color: #0f101c;
+  background-image: url(assets/bkg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main{
@@ -30,7 +32,6 @@ main{
   background-color: rgba(0,0,0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 1;
- 
 }
 
 .nav-actions{
@@ -125,7 +126,7 @@ main{
   text-align: left;
   font-size: 2.5em;
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .card .card-title {
   font-size: clamp(2rem, 5vw, 3em);
@@ -156,7 +157,7 @@ main{
   transition: 0.5s;
 }
 
-.card .card-para{
+.card .card-para, .skill-tab{
   font-family: sans-serif;
   font-size: 1em;
   color: #A1A1AA;
@@ -177,17 +178,17 @@ main{
   list-style-type: none;
   display: flex;
   padding: 0;
+  margin-top: 10px;
   margin-bottom: 0;
   flex-wrap: wrap;
   gap: 15px;
-  background-color: #0f101c;
   text-align: left;
 
 }
 
 .card .card-list li {
   font-family: 'Courier New';
-  font-size: clamp(4px, 2vw, 16px);
+  font-size: clamp(3px, 2vw, 16px);
   color: white;
   border: 1px solid #A1A1AA;
   border-radius: 10px;
@@ -201,7 +202,7 @@ main{
 }
 
 .card .card-list li:hover{
-  font-size: clamp(5px, 3vw, 17px);
+  font-size: clamp(4px, 2.5vw, 17px);
   transition: 0.5s;
 }
 
@@ -229,6 +230,35 @@ main{
   color: white;
   cursor: pointer;
 }
+
+/*Skill Tab Properties*/
+@layer components {
+  .skill-tab{
+    @apply border-[1px] border-[gray] rounded-[20px] w-full h-full p-[20px] flex flex-col gap-4 transition-all duration-[0.25s];
+  }
+
+  .skill-tab h3{
+    @apply font-['Arial'] font-bold text-[clamp(14px,2vw,18px)] m-0 text-white;
+  }
+
+  .skill-tab ul{
+    @apply flex flex-wrap;
+  }
+
+  .skill-tab li {
+    @apply list-none text-white text-[clamp(10px,2vw,14px)] p-1 m-2 gap-2 bg-[#202020] rounded-[10px] w-fit;
+  }
+
+  .skill-tab:hover{
+    @apply border-[white] transition-all duration-[0.25s] ease-out;
+  }
+
+  .skill-tab:hover h3, .skill-tab:hover{
+    @apply text-[Aqua];
+  }
+
+}
+
 
 
 @media(max-width: 750px){

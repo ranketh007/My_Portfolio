@@ -20,12 +20,15 @@ function Header(){
                     <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
                 <div className="nav-actions">
                 <a href="https://www.linkedin.com/in/dinithamahamethige" target="_blank" className="linkedin"><FaLinkedin /></a>
                 <a href={cv} download="Dinitha_Ranketh_CV" className="cv-btn"><AiOutlineDownload /> CV</a>
+
                 <button className="block md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
-                <GiHamburgerMenu className="h-7 w-7"/>
+                    <GiHamburgerMenu className="h-7 w-7"/>
                 </button>
+                
                 </div>
             </nav>
         </header>
